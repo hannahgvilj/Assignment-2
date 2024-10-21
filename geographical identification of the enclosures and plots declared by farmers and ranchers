@@ -1,0 +1,9 @@
+Name: 40900_PARFE
+Source: /Users/hannahviljoen/Downloads/GIS agricultural plots /40900_Segovia/40900_PARFE.shp
+Algorithm 'Clip vector by mask layer' starting…
+processing.run("gdal:clipvectorbypolygon", {'INPUT':'/Users/hannahviljoen/Downloads/enre_cyl_sens_ambi_aves_plan.gpkg|layername=enre_cyl_sens_ambi_aves_plan','MASK':'/Users/hannahviljoen/Downloads/prov_cyl_recintos.gpkg|layername=prov_cyl_recintos','OPTIONS':'','OUTPUT':'TEMPORARY_OUTPUT'})
+
+
+
+
+
