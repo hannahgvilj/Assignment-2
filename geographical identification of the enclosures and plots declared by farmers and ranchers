@@ -1,9 +1,23 @@
 Name: 40900_PARFE
 Source: /Users/hannahviljoen/Downloads/GIS agricultural plots /40900_Segovia/40900_PARFE.shp
+
 Algorithm 'Clip vector by mask layer' starting…
 processing.run("gdal:clipvectorbypolygon", {'INPUT':'/Users/hannahviljoen/Downloads/enre_cyl_sens_ambi_aves_plan.gpkg|layername=enre_cyl_sens_ambi_aves_plan','MASK':'/Users/hannahviljoen/Downloads/prov_cyl_recintos.gpkg|layername=prov_cyl_recintos','OPTIONS':'','OUTPUT':'TEMPORARY_OUTPUT'})
 
+'Clip vector by mask layer'
+processing.run("gdal:clipvectorbypolygon", {'INPUT':'/Users/hannahviljoen/Downloads/enre_cyl_sens_ambi_aves_plan.gpkg|layername=enre_cyl_sens_ambi_aves_plan','MASK':'/Users/hannahviljoen/Downloads/sego limit.shp','OPTIONS':'','OUTPUT':'TEMPORARY_OUTPUT'})
 
 
+Clipping nitrogen to Segvia Region: 
+GDAL command:
+ogr2ogr -clipsrc "/Users/hannahviljoen/Downloads/sego limit.shp" -clipsrclayer "sego limit" /private/var/folders/x4/y_s885yd4d7bqftnvz53yzqw0000gn/T/processing_NuvMtr/319669954f15480680ce6b29a9b8445a/OUTPUT.gpkg /Users/hannahviljoen/Documents/GIS/coad_cyl_nitrog_ganad_comarca/coad_cyl_nitrog_ganad_comarca.shp coad_cyl_nitrog_ganad_comarca -f "GPKG"
+Result: 
+processing.run("gdal:clipvectorbypolygon", {'INPUT':'/Users/hannahviljoen/Documents/GIS/coad_cyl_nitrog_ganad_comarca/coad_cyl_nitrog_ganad_comarca.shp','MASK':'/Users/hannahviljoen/Downloads/sego limit.shp','OPTIONS':'','OUTPUT':'TEMPORARY_OUTPUT'})
+{'OUTPUT': '/private/var/folders/x4/y_s885yd4d7bqftnvz53yzqw0000gn/T/processing_NuvMtr/319669954f15480680ce6b29a9b8445a/OUTPUT.gpkg'}
 
-
+Clipping hydrology to Segovia Region: 
+GDAL command:
+ogr2ogr -clipsrc "/Users/hannahviljoen/Downloads/sego limit.shp" -clipsrclayer "sego limit" /private/var/folders/x4/y_s885yd4d7bqftnvz53yzqw0000gn/T/processing_NuvMtr/b9f3badff4bb433c8df899daab6865bd/OUTPUT.gpkg /Users/hannahviljoen/Downloads/hy.hidro_cyl_masas/hy.hidro_cyl_masas.shp hy.hidro_cyl_masas -f "GPKG"
+Results:
+processing.run("gdal:clipvectorbypolygon", {'INPUT':'/Users/hannahviljoen/Downloads/hy.hidro_cyl_masas/hy.hidro_cyl_masas.shp','MASK':'/Users/hannahviljoen/Downloads/sego limit.shp','OPTIONS':'','OUTPUT':'TEMPORARY_OUTPUT'})
+{'OUTPUT': '/private/var/folders/x4/y_s885yd4d7bqftnvz53yzqw0000gn/T/processing_NuvMtr/b9f3badff4bb433c8df899daab6865bd/OUTPUT.gpkg'}
